@@ -2,12 +2,18 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Home } from './components/Home';
 import { Header } from './components/Header';
+import { Box } from './components/Box';
 
 class App extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col">
+                        <Box name={"my text that is sent in via prop"}></Box>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
                         <Header name={'A name'}/>

@@ -11,7 +11,7 @@ export class Header extends React.Component {
                 <h1>{this.props.name}</h1>
               <li>
                 <a href="">Home</a> {2+2}
-                {[1,2,3,4,5,6].map((n, i)=>{
+                {[1,2].map((n, i)=>{
                     return <p key={i}>{n}</p>
                 })}
               </li>
