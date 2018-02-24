@@ -3,12 +3,15 @@ import { render } from 'react-dom';
 import { Home } from './components/Home';
 import { Header } from './components/Header';
 import { Box } from './components/Box';
+import { Parent } from './components/Parent';
 
 class App extends React.Component {
 
     render() {
         return (
             <div className="container-fluid">
+
+                <Parent />
                 <div className="row">
                     <div className="col">
                         <Box name={"my text that is sent in via prop"}></Box>
