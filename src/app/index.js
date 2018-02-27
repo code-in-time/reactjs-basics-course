@@ -1,33 +1,25 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
 import { Home } from './components/Home';
 import { Header } from './components/Header';
 import { Box } from './components/Box';
 import { Parent } from './components/Parent';
+import Root from './components/Root';
+import User from './components/User';
 
 class App extends React.Component {
-
-    render() {
-        return (
-            <div className="container-fluid">
-
-                <Parent />
-                <div className="row">
-                    <div className="col">
-                        <Box name={"my text that is sent in via prop"}></Box>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-xs-10 col-xs-offset-1">
-                        <Header name={'A name'}/>
-                    </div>
-                    <div className="col-xs-10 col-xs-offset-1">
-                        <Home initialAge={2}><p>this my text</p></Home>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Root} />
+          <Route path="/user" component={User} />
+        </Switch>
+      </Router>
+    );
+  }
 }
 
 render(<App />, window.document.getElementById('app'));

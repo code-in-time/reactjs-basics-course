@@ -24,6 +24,6 @@ export class Home extends React.Component {
   }
 }
 
-Home.propTypes = {
-  age: React.PropTypes.number
-};
+// Home.propTypes = {
+//   age: React.PropTypes.number
+// };
